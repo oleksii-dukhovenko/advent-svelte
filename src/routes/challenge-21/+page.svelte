@@ -51,7 +51,7 @@
 
 <main>
     <div class="center">
-        <h1 class="main-title">Challenge 21</h1>
+        <h1 class="main-title">Weather Application</h1>
     </div>
 
     <div class="center">
@@ -62,10 +62,6 @@
                 class="santa-picture"
             />
         </div>
-    </div>
-
-    <div class="center">
-        <h3 class="weather-title">Weather Application</h3>
     </div>
 
     <div class="tab-container center">
@@ -102,7 +98,10 @@
                                 Temp: {weather.temperature.toFixed(2)}°C
                             </p>
                             <p class="weather-rain">
+                                {#if weather.rain > 0}
                                 Rain: {weather.rain.toFixed(2)}mm
+                                {:else}No rain!
+                                {/if}
                             </p>
                          
 
@@ -144,26 +143,22 @@
 
     <style>
         .main-title {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: bold;
-            text-decoration: underline;
             text-align: center;
-            margin-top: 150px;
-            margin-bottom: 100px;
-            color: #2a9d8f;
+
+            color: #264653;
         }
         .santa-picture {
             border-radius: 20%;
-            margin-top: 80px;
             width: 500px;
             height: 170px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 7);
         }
         .weather-title {
             font-size: 2.5em;
             font-weight: bold;
             text-align: center;
-            margin-top: 200px;
             color: #264653;
         }
         .center {
@@ -174,7 +169,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 80px;
         }
         .weather-grid {
             display: grid;
