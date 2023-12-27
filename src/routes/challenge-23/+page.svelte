@@ -97,7 +97,7 @@
 <main>
   <h1 class ="h1">Elf-Book</h1>
   <div class="f-logo">f</div>
-  {#each posts as post}
+  {#each posts.slice().reverse() as post}
     <div class="post">
       <div class="post-header">
         <span class="post-author">{post.author}</span>
