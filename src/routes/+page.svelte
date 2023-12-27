@@ -18,12 +18,10 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		To My Advent of Svelte<br />Submissions
 	</h1>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+
 
 	<Counter />
 </section>
